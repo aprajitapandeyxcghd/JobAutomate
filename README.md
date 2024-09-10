@@ -8,4 +8,4 @@ Python: Core programming language
 
 Requests, BeautifulSoup: For web scraping
 
-Smtplib: For email automation
+
