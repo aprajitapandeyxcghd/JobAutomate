@@ -1,0 +1,76 @@
+Job Scraper and Application Automation
+Overview
+This project includes two Python scripts for job scraping and application automation using Selenium and BeautifulSoup:
+
+job_scraper.py: Scrapes job listings from Indeed and LinkedIn.
+job_portal_automation.py: Automates job applications by interacting with the user via a GUI and applying to selected job listings.
+Features
+Scrapes job listings from Indeed and LinkedIn based on job title and location.
+Allows the user to filter job listings based on skills.
+Provides a GUI for applying to jobs and choosing resumes.
+Automatically uploads resumes and submits job applications.
+Prerequisites
+Python 3.x
+Selenium WebDriver for Chrome (make sure chromedriver is compatible with your Chrome version)
+BeautifulSoup4
+Tkinter (usually comes with Python's standard library)
+Installation
+Clone the Repository
+
+bash
+Copy code
+git clone https://github.com/yourusername/job-scraper-and-application-automation.git
+cd job-scraper-and-application-automation
+Install Dependencies
+
+Install the required Python packages:
+
+bash
+Copy code
+pip install selenium beautifulsoup4
+Ensure that chromedriver is downloaded and placed in the same directory as job_scraper.py or update the path in the script.
+
+Configuration
+job_scraper.py: Modify the job_title, location, and skills variables in the script or pass them as input when running the script.
+job_portal_automation.py: Set the path to your resume files in the choose_resume() function. Ensure the predefined resume files are available in the project directory.
+Usage
+Running the Job Scraper
+To scrape job listings, run:
+
+bash
+Copy code
+python job_scraper.py
+You will be prompted to choose a platform (Indeed or LinkedIn), and the script will output job listings based on the provided parameters.
+
+Running the Job Application Automation
+To automate job applications, run:
+
+bash
+Copy code
+python job_portal_automation.py
+Enter the job title and location.
+Choose the platform (Indeed or LinkedIn).
+Select a resume from the predefined options.
+For each job listing, a popup will ask if you want to apply. Choose yes, update, or no.
+Code Overview
+job_scraper.py
+init_driver(): Initializes the Selenium WebDriver.
+scrape_jobs_indeed(): Scrapes job listings from Indeed.
+scrape_jobs_linkedin(): Scrapes job listings from LinkedIn.
+scrape_jobs(): Main function to call the appropriate scraper based on the platform.
+job_portal_automation.py
+show_popup(): Displays a GUI popup asking if the user wants to apply for the job.
+apply_for_job(): Automates the job application process by uploading a resume and submitting the application.
+choose_resume(): Lets the user select a resume from predefined options.
+main(): Main function to run the job application automation process.
+Troubleshooting
+WebDriver Issues: Ensure that chromedriver is compatible with your version of Chrome.
+Page Load Issues: Increase time.sleep() durations if pages take longer to load.
+Element Not Found: Update the XPaths in the apply_for_job() function if LinkedIn or Indeed changes their page structure.
+Contributing
+Feel free to open issues or submit pull requests for improvements. Please ensure that your contributions adhere to the project’s coding standards and include appropriate tests.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Feel free to customize this documentation to better fit your project specifics or add any additional sections as needed.
