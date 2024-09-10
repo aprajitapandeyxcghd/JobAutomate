@@ -6,6 +6,6 @@ This project automates the job application process, enhancing efficiency by empl
 
 Python: Core programming language
 
-Requests, BeautifulSoup: For web scraping
+Selenium, BeautifulSoup: For web scraping
 
 
